@@ -3,40 +3,33 @@ package com.online.store.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.online.store.demo.model.Catalogue;
 import com.online.store.demo.repository.CatalogueRepository;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author rasrivastava
  *
  */
-@Controller
+@RestController
 public class CatalogueController {
 	
+	private static final Logger logger = LoggerFactory.getLogger(CatalogueController.class);
+
 	@Autowired
 	private CatalogueRepository catalogueRepository;
 
-    @GetMapping ("/cataloguedisplay")
-    public String fetchProductsDisplay (Model model)
-    {
-        List<Catalogue> products = catalogueRepository.findAll();
-
-        model.addAttribute("catalogues", products);
-
-        return "catalogues";
-    }
     
     @GetMapping("/catalogue")
-    @ResponseBody
-    public Object fetchProducts ()
+    public Object fetchProducts1 ()
     {
         List<Catalogue> products = catalogueRepository.findAll();
+        logger.info("**Calling /catalogue ");
         return products;
     }
-
 }

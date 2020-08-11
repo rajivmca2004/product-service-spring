@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.online.store.demo</groupId>
-	<artifactId>catalogue-service</artifactId>
+	<artifactId>catalogue-service-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>catalogue-service</name>
+	<name>catalogue-service-spring</name>
 	<description>Catalogue project for SpringBoot K8s Demo</description>
 
 	<properties>
@@ -22,7 +22,7 @@
 		<java.version>1.8</java.version>
 		<wavefront.version>2.0.0-RC1</wavefront.version>
 		<docker.image.prefix>itsrajivsrivastava</docker.image.prefix>
-		
+
 	</properties>
 
 	<dependencies>
@@ -30,10 +30,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.wavefront</groupId> -->
-<!-- 			<artifactId>wavefront-spring-boot-starter</artifactId> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>com.wavefront</groupId>
+			<artifactId>wavefront-spring-boot-starter</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>io.micrometer</groupId>
@@ -47,14 +47,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>

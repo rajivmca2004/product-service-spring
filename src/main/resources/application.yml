@@ -1,6 +1,6 @@
 spring:
   application:
-    name: catalogue-service
+    name: catalogue-service-spring
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,7 +17,7 @@ management:
       exposure:
         include: '*'
 server:
-  port : 8010
+  port : 9010
 springdoc:
   api-docs:
     path: /docs
