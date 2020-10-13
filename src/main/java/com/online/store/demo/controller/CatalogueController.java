@@ -27,7 +27,7 @@ public class CatalogueController {
 	@GetMapping("/catalogue")
 	public Object fetchProducts() {
 		List<Catalogue> products = catalogueRepository.findAll();
-		logger.info("**Calling /catalogue ");
+		logger.info("**Calling catalogue ");
 		return products;
 	}
 

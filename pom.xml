@@ -10,11 +10,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.online.store.demo</groupId>
-	<artifactId>catalogue-service-spring</artifactId>
+	<artifactId>product-service-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>catalogue-service-spring</name>
-	<description>Catalogue project for SpringBoot K8s Demo</description>
+	<name>product-service-spring</name>
+	<description>product-service-spring project for SpringBoot K8s Demo</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
