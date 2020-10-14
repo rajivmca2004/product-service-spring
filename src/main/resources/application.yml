@@ -1,26 +1,19 @@
 spring:
   application:
-    name: catalogue-service-spring
-#  profiles:
-#   active: development
-#  cloud:
-#    config:
-#      uri: http://localhost:8888
+    name: product-service-spring
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: development
   jpa:
     hibernate:
       ddl-auto: update
 management:
-  endpoint:
-    health:
-      enabled: true
-      show-details: always
   endpoints:
     web:
       exposure:
-        include: '*'
-    jmx:
-      exposure:
-        include: '*'
+        include: refresh
 server:
   port : 9010
 springdoc:
