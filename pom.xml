@@ -107,7 +107,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- tag::plugin[] -->
+			<!-- Docker plugin tag::plugin[] -->
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -119,7 +119,7 @@
 					</buildArgs>
 				</configuration>
 			</plugin>
-			<!-- end::plugin[] -->
+			<!-- Docker end::plugin[] -->
 
 		</plugins>
 	</build>
